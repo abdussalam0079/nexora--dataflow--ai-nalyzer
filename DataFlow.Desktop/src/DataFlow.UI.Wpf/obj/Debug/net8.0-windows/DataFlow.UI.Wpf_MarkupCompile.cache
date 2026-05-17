@@ -1,0 +1,20 @@
+﻿DataFlow.UI.Wpf
+1.0.0.0
+
+winexe
+C#
+.cs
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.UI.Wpf\obj\Debug\net8.0-windows\
+DataFlow.UI.Wpf
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.UI.Wpf\App.xaml
+131928281161
+
+241429624933
+251769171732
+Dialogs\NewDashboardDialog.xaml;Dialogs\NewProjectDialog.xaml;MainWindow.xaml;Themes\AppTheme.xaml;Views\ChatWorkspaceView.xaml;Views\DashboardBuilderView.xaml;Views\EnterpriseAuditView.xaml;Views\InsightsView.xaml;Views\ProjectChatView.xaml;Views\ProjectDetailView.xaml;Views\ProjectsHomeView.xaml;Views\RealtimeView.xaml;Views\SimplePage.xaml;
+
+False
+

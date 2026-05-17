@@ -1,0 +1,17 @@
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.csproj.AssemblyReference.cache
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.GeneratedMSBuildEditorConfig.editorconfig
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.AssemblyInfoInputs.cache
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.AssemblyInfo.cs
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.csproj.CoreCompileInputs.cache
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Analytics.deps.json
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Analytics.dll
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Analytics.pdb
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Application.dll
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Core.dll
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Core.pdb
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Application.pdb
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.CCF7A4AC.Up2Date
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.dll
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\refint\DataFlow.Analytics.dll
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.pdb
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\ref\DataFlow.Analytics.dll

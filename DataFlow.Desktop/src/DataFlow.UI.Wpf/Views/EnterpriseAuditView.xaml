@@ -1,0 +1,241 @@
+<UserControl x:Class="DataFlow.UI.Wpf.Views.EnterpriseAuditView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             Background="{StaticResource BgSurfaceBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" Padding="28,20,28,16"
+                BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="0,0,0,1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <TextBlock Text="Enterprise Audit" FontSize="22" FontWeight="Bold"
+                               Foreground="{StaticResource TextPrimaryBrush}" FontFamily="Segoe UI" />
+                    <TextBlock Text="Compliance monitoring, access logs, and security audit trail"
+                               FontSize="12" Foreground="{StaticResource TextMutedBrush}"
+                               FontFamily="Segoe UI" Margin="0,4,0,0" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button Content="Export Report" Style="{StaticResource GhostButtonStyle}" Margin="0,0,8,0" />
+                    <Button Content="Configure Alerts" Style="{StaticResource AccentButtonStyle}" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Compliance badges -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="28,16,28,0">
+            <Border Background="#0A1A0A" BorderBrush="#153D15" BorderThickness="1"
+                    CornerRadius="10" Padding="14,8" Margin="0,0,10,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="✓" FontSize="14" Foreground="{StaticResource GreenBrush}"
+                               VerticalAlignment="Center" Margin="0,0,8,0" />
+                    <StackPanel>
+                        <TextBlock Text="SOC 2 Type II" FontSize="12" FontWeight="SemiBold"
+                                   Foreground="{StaticResource TextPrimaryBrush}" FontFamily="Segoe UI" />
+                        <TextBlock Text="Compliant" FontSize="10"
+                                   Foreground="{StaticResource GreenBrush}" FontFamily="Segoe UI" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <Border Background="#0A1A0A" BorderBrush="#153D15" BorderThickness="1"
+                    CornerRadius="10" Padding="14,8" Margin="0,0,10,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="✓" FontSize="14" Foreground="{StaticResource GreenBrush}"
+                               VerticalAlignment="Center" Margin="0,0,8,0" />
+                    <StackPanel>
+                        <TextBlock Text="GDPR" FontSize="12" FontWeight="SemiBold"
+                                   Foreground="{StaticResource TextPrimaryBrush}" FontFamily="Segoe UI" />
+                        <TextBlock Text="Compliant" FontSize="10"
+                                   Foreground="{StaticResource GreenBrush}" FontFamily="Segoe UI" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <Border Background="#1A1A0A" BorderBrush="#3D3D15" BorderThickness="1"
+                    CornerRadius="10" Padding="14,8" Margin="0,0,10,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="⚠" FontSize="14" Foreground="{StaticResource OrangeBrush}"
+                               VerticalAlignment="Center" Margin="0,0,8,0" />
+                    <StackPanel>
+                        <TextBlock Text="HIPAA" FontSize="12" FontWeight="SemiBold"
+                                   Foreground="{StaticResource TextPrimaryBrush}" FontFamily="Segoe UI" />
+                        <TextBlock Text="Review needed" FontSize="10"
+                                   Foreground="{StaticResource OrangeBrush}" FontFamily="Segoe UI" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <Border Background="#0A1A0A" BorderBrush="#153D15" BorderThickness="1"
+                    CornerRadius="10" Padding="14,8">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="✓" FontSize="14" Foreground="{StaticResource GreenBrush}"
+                               VerticalAlignment="Center" Margin="0,0,8,0" />
+                    <StackPanel>
+                        <TextBlock Text="ISO 27001" FontSize="12" FontWeight="SemiBold"
+                                   Foreground="{StaticResource TextPrimaryBrush}" FontFamily="Segoe UI" />
+                        <TextBlock Text="Certified" FontSize="10"
+                                   Foreground="{StaticResource GreenBrush}" FontFamily="Segoe UI" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <!-- Audit log table -->
+        <Border Grid.Row="2" Style="{StaticResource CardStyle}" Margin="28,16,28,20">
+            <StackPanel>
+                <Grid Margin="0,0,0,12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Audit Log" FontSize="13" FontWeight="SemiBold"
+                               Foreground="{StaticResource TextPrimaryBrush}" FontFamily="Segoe UI"
+                               VerticalAlignment="Center" />
+                    <Border Grid.Column="1" Background="#141928" BorderBrush="{StaticResource BorderBrush}"
+                            BorderThickness="1" CornerRadius="8" Height="32" Width="200">
+                        <Grid Margin="10,0">
+                            <TextBlock Text="⌕  Filter logs…"
+                                       Foreground="{StaticResource TextMutedBrush}"
+                                       FontSize="12" FontFamily="Segoe UI" VerticalAlignment="Center" />
+                        </Grid>
+                    </Border>
+                </Grid>
+
+                <!-- Table header -->
+                <Border Background="{StaticResource BgCard2Brush}" CornerRadius="8" Padding="12,8" Margin="0,0,0,4">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="160" />
+                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="80" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="TIMESTAMP" FontSize="10" FontWeight="Bold"
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" />
+                        <TextBlock Grid.Column="1" Text="USER" FontSize="10" FontWeight="Bold"
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" />
+                        <TextBlock Grid.Column="2" Text="ACTION" FontSize="10" FontWeight="Bold"
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" />
+                        <TextBlock Grid.Column="3" Text="RESOURCE" FontSize="10" FontWeight="Bold"
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" />
+                        <TextBlock Grid.Column="4" Text="STATUS" FontSize="10" FontWeight="Bold"
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI" />
+                    </Grid>
+                </Border>
+
+                <!-- Table rows -->
+                <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="300">
+                    <StackPanel>
+                        <Border Padding="12,10" Margin="0,0,0,2" Background="Transparent">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#141928" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="160" />
+                                    <ColumnDefinition Width="120" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="80" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="2025-07-14 09:42:11" FontSize="12"
+                                           Foreground="{StaticResource TextSecondaryBrush}" FontFamily="Consolas" />
+                                <TextBlock Grid.Column="1" Text="m.hassan" FontSize="12"
+                                           Foreground="{StaticResource TextPrimaryBrush}" FontFamily="Segoe UI" />
+                                <TextBlock Grid.Column="2" Text="Exported dashboard to PDF" FontSize="12"
+                                           Foreground="{StaticResource TextSecondaryBrush}" FontFamily="Segoe UI" />
+                                <TextBlock Grid.Column="3" Text="Dashboard #42" FontSize="12"
+                                           Foreground="{StaticResource TextSecondaryBrush}" FontFamily="Segoe UI" />
+                                <Border Grid.Column="4" Background="#0A1A0A" CornerRadius="5" Padding="6,2">
+                                    <TextBlock Text="Success" FontSize="11"
+                                               Foreground="{StaticResource GreenBrush}" FontFamily="Segoe UI" />
+                                </Border>
+                            </Grid>
+                        </Border>
+                        <Border Padding="12,10" Margin="0,0,0,2" Background="Transparent">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#141928" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="160" />
+                                    <ColumnDefinition Width="120" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="80" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="2025-07-14 09:38:05" FontSize="12"
+                                           Foreground="{StaticResource TextSecondaryBrush}" FontFamily="Consolas" />
+                                <TextBlock Grid.Column="1" Text="j.smith" FontSize="12"
+                                           Foreground="{StaticResource TextPrimaryBrush}" FontFamily="Segoe UI" />
+                                <TextBlock Grid.Column="2" Text="Attempted unauthorized access" FontSize="12"
+                                           Foreground="{StaticResource RedBrush}" FontFamily="Segoe UI" />
+                                <TextBlock Grid.Column="3" Text="Dataset #18" FontSize="12"
+                                           Foreground="{StaticResource TextSecondaryBrush}" FontFamily="Segoe UI" />
+                                <Border Grid.Column="4" Background="#1A0A0A" CornerRadius="5" Padding="6,2">
+                                    <TextBlock Text="Denied" FontSize="11"
+                                               Foreground="{StaticResource RedBrush}" FontFamily="Segoe UI" />
+                                </Border>
+                            </Grid>
+                        </Border>
+                        <Border Padding="12,10" Margin="0,0,0,2" Background="Transparent">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#141928" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="160" />
+                                    <ColumnDefinition Width="120" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="80" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="2025-07-14 09:31:44" FontSize="12"
+                                           Foreground="{StaticResource TextSecondaryBrush}" FontFamily="Consolas" />
+                                <TextBlock Grid.Column="1" Text="a.patel" FontSize="12"
+                                           Foreground="{StaticResource TextPrimaryBrush}" FontFamily="Segoe UI" />
+                                <TextBlock Grid.Column="2" Text="Modified dataset schema" FontSize="12"
+                                           Foreground="{StaticResource TextSecondaryBrush}" FontFamily="Segoe UI" />
+                                <TextBlock Grid.Column="3" Text="Dataset #7" FontSize="12"
+                                           Foreground="{StaticResource TextSecondaryBrush}" FontFamily="Segoe UI" />
+                                <Border Grid.Column="4" Background="#0A1A0A" CornerRadius="5" Padding="6,2">
+                                    <TextBlock Text="Success" FontSize="11"
+                                               Foreground="{StaticResource GreenBrush}" FontFamily="Segoe UI" />
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

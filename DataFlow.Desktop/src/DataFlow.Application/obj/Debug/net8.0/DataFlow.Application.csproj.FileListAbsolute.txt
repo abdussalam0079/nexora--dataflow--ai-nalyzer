@@ -1,0 +1,15 @@
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\bin\Debug\net8.0\DataFlow.Application.deps.json
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\bin\Debug\net8.0\DataFlow.Application.dll
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\bin\Debug\net8.0\DataFlow.Application.pdb
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\bin\Debug\net8.0\DataFlow.Core.dll
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\bin\Debug\net8.0\DataFlow.Core.pdb
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\obj\Debug\net8.0\DataFlow.Application.csproj.AssemblyReference.cache
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\obj\Debug\net8.0\DataFlow.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\obj\Debug\net8.0\DataFlow.Application.AssemblyInfoInputs.cache
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\obj\Debug\net8.0\DataFlow.Application.AssemblyInfo.cs
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\obj\Debug\net8.0\DataFlow.Application.csproj.CoreCompileInputs.cache
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\obj\Debug\net8.0\DataFlow.00FD3A21.Up2Date
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\obj\Debug\net8.0\DataFlow.Application.dll
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\obj\Debug\net8.0\refint\DataFlow.Application.dll
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\obj\Debug\net8.0\DataFlow.Application.pdb
+D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Application\obj\Debug\net8.0\ref\DataFlow.Application.dll

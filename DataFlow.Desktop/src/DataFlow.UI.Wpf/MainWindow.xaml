@@ -1,0 +1,473 @@
+<Window x:Class="DataFlow.UI.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="DataFlow AI Analytics"
+        MinWidth="1200" MinHeight="760"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BgDeepBrush}"
+        WindowStyle="None"
+        AllowsTransparency="False"
+        ResizeMode="CanResizeWithGrip">
+
+    <Window.Resources>
+        <!-- Pulse animation for status dot -->
+        <Storyboard x:Key="PulseAnim" RepeatBehavior="Forever">
+            <DoubleAnimation Storyboard.TargetName="StatusDot"
+                             Storyboard.TargetProperty="Opacity"
+                             From="1" To="0.3" Duration="0:0:1"
+                             AutoReverse="True" />
+        </Storyboard>
+    </Window.Resources>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource PulseAnim}" />
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Border Background="{StaticResource BgDeepBrush}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!-- Icon Rail -->
+                <ColumnDefinition Width="64" />
+                <!-- Expanded Nav -->
+                <ColumnDefinition x:Name="NavColumn" Width="220" />
+                <!-- Main Content -->
+                <ColumnDefinition Width="*" />
+                <!-- Conversations Panel -->
+                <ColumnDefinition x:Name="ConversationsColumn" Width="300" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <!-- Custom Title Bar -->
+                <RowDefinition Height="48" />
+                <!-- Content -->
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- ═══════════════════════════════════════
+                 CUSTOM TITLE BAR
+            ═══════════════════════════════════════ -->
+            <Border Grid.Row="0" Grid.ColumnSpan="4"
+                    Background="{StaticResource BgDeepBrush}"
+                    BorderBrush="{StaticResource BorderSubtleBrush}"
+                    BorderThickness="0,0,0,1"
+                    MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+                <Grid Margin="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="284" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Logo area -->
+                    <StackPanel Grid.Column="0" Orientation="Horizontal"
+                                VerticalAlignment="Center" Margin="16,0">
+                        <Border Width="28" Height="28" CornerRadius="8"
+                                Background="{StaticResource AccentGradient}">
+                            <TextBlock Text="⬡" Foreground="White" FontSize="14"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
+                            <TextBlock Text="DataFlow AI" FontSize="13" FontWeight="Bold"
+                                       Foreground="{StaticResource TextPrimaryBrush}"
+                                       FontFamily="Segoe UI" />
+                            <TextBlock Text="Analytics Platform" FontSize="10"
+                                       Foreground="{StaticResource TextMutedBrush}"
+                                       FontFamily="Segoe UI" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- Search bar -->
+                    <Border Grid.Column="1" Background="#141928"
+                            BorderBrush="{StaticResource BorderBrush}"
+                            BorderThickness="1" CornerRadius="10"
+                            Height="36" VerticalAlignment="Center"
+                            Margin="0,0,16,0">
+                        <Grid Margin="12,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="⌕" Foreground="{StaticResource TextMutedBrush}"
+                                       FontSize="16" VerticalAlignment="Center" Margin="0,0,8,0" />
+                            <TextBlock Grid.Column="1"
+                                       Text="Search projects, dashboards, insights…"
+                                       Foreground="{StaticResource TextMutedBrush}"
+                                       FontSize="12" FontFamily="Segoe UI"
+                                       VerticalAlignment="Center" />
+                            <Border Grid.Column="2" Background="#1E2640"
+                                    CornerRadius="5" Padding="6,2">
+                                <TextBlock Text="⌘K" Foreground="{StaticResource TextMutedBrush}"
+                                           FontSize="11" FontFamily="Segoe UI" />
+                            </Border>
+                        </Grid>
+                    </Border>
+
+                    <!-- Right controls -->
+                    <StackPanel Grid.Column="2" Orientation="Horizontal"
+                                VerticalAlignment="Center" Margin="0,0,8,0">
+                        <TextBlock x:Name="DateTextBlock"
+                                   Foreground="{StaticResource TextMutedBrush}"
+                                   FontSize="12" FontFamily="Segoe UI"
+                                   VerticalAlignment="Center" Margin="0,0,12,0" />
+
+                        <!-- Status indicator -->
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,12,0">
+                            <Ellipse x:Name="StatusDot" Width="8" Height="8"
+                                     Fill="{StaticResource GreenBrush}" />
+                            <TextBlock Text="Live" Foreground="{StaticResource GreenBrush}"
+                                       FontSize="11" FontFamily="Segoe UI"
+                                       VerticalAlignment="Center" Margin="4,0,0,0" />
+                        </StackPanel>
+
+                        <Button Content="🔔" Style="{StaticResource IconButtonStyle}" Margin="0,0,6,0" />
+
+                        <!-- Avatar -->
+                        <Border Background="{StaticResource AccentGradient}"
+                                CornerRadius="10" Width="32" Height="32"
+                                Margin="0,0,12,0" Cursor="Hand">
+                            <TextBlock Text="MH" Foreground="White"
+                                       FontWeight="Bold" FontSize="12"
+                                       FontFamily="Segoe UI"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" />
+                        </Border>
+
+                        <!-- Window controls -->
+                        <Button Content="─" Width="40" Height="48"
+                                Background="Transparent" BorderBrush="Transparent"
+                                Foreground="{StaticResource TextMutedBrush}"
+                                FontSize="12" Cursor="Hand"
+                                Click="MinimizeButton_Click" />
+                        <Button Content="□" Width="40" Height="48"
+                                Background="Transparent" BorderBrush="Transparent"
+                                Foreground="{StaticResource TextMutedBrush}"
+                                FontSize="12" Cursor="Hand"
+                                Click="MaximizeButton_Click" />
+                        <Button Content="✕" Width="40" Height="48"
+                                Background="Transparent" BorderBrush="Transparent"
+                                Foreground="{StaticResource TextMutedBrush}"
+                                FontSize="12" Cursor="Hand"
+                                Click="CloseButton_Click">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent" />
+                                    <Setter Property="BorderBrush" Value="Transparent" />
+                                    <Setter Property="Foreground" Value="{StaticResource TextMutedBrush}" />
+                                    <Setter Property="FontSize" Value="12" />
+                                    <Setter Property="Cursor" Value="Hand" />
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border x:Name="Bd" Background="{TemplateBinding Background}"
+                                                        Width="40" Height="48">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="Bd" Property="Background" Value="#C42B1C" />
+                                                        <Setter Property="Foreground" Value="White" />
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- ═══════════════════════════════════════
+                 ICON RAIL (always visible)
+            ═══════════════════════════════════════ -->
+            <Border Grid.Row="1" Grid.Column="0"
+                    Background="{StaticResource SidebarGradient}"
+                    BorderBrush="{StaticResource BorderSubtleBrush}"
+                    BorderThickness="0,0,1,0">
+                <DockPanel LastChildFill="False">
+                    <!-- Toggle button -->
+                    <Button DockPanel.Dock="Top"
+                            x:Name="RailToggleButton"
+                            Width="40" Height="40"
+                            Margin="12,12,12,8"
+                            Style="{StaticResource IconButtonStyle}"
+                            Click="ToggleSidebarButton_Click"
+                            ToolTip="Toggle sidebar">
+                        <TextBlock Text="☰" FontSize="16"
+                                   Foreground="{StaticResource TextSecondaryBrush}" />
+                    </Button>
+
+                    <!-- Rail icons -->
+                    <StackPanel DockPanel.Dock="Top" Margin="12,4">
+                        <Button x:Name="RailChat" Width="40" Height="40" Margin="0,2"
+                                Style="{StaticResource IconButtonStyle}"
+                                Click="WorkspaceButton_Click" ToolTip="AI Workspace">
+                            <TextBlock Text="💬" FontSize="16" />
+                        </Button>
+                        <Button x:Name="RailProjects" Width="40" Height="40" Margin="0,2"
+                                Style="{StaticResource IconButtonStyle}"
+                                Click="ProjectsButton_Click" ToolTip="Projects">
+                            <TextBlock Text="▦" FontSize="16" />
+                        </Button>
+                        <Button x:Name="RailDashboard" Width="40" Height="40" Margin="0,2"
+                                Style="{StaticResource IconButtonStyle}"
+                                Click="DashboardButton_Click" ToolTip="Dashboard Builder">
+                            <TextBlock Text="⊞" FontSize="16" />
+                        </Button>
+                        <Button x:Name="RailInsights" Width="40" Height="40" Margin="0,2"
+                                Style="{StaticResource IconButtonStyle}"
+                                Click="InsightsButton_Click" ToolTip="Insights">
+                            <TextBlock Text="✦" FontSize="16" />
+                        </Button>
+                        <Button x:Name="RailRealtime" Width="40" Height="40" Margin="0,2"
+                                Style="{StaticResource IconButtonStyle}"
+                                Click="RealtimeButton_Click" ToolTip="Realtime">
+                            <TextBlock Text="⚡" FontSize="16" />
+                        </Button>
+                        <Button x:Name="RailAudit" Width="40" Height="40" Margin="0,2"
+                                Style="{StaticResource IconButtonStyle}"
+                                Click="AuditButton_Click" ToolTip="Enterprise Audit">
+                            <TextBlock Text="🛡" FontSize="16" />
+                        </Button>
+                    </StackPanel>
+
+                    <!-- Bottom settings -->
+                    <StackPanel DockPanel.Dock="Bottom" Margin="12,0,12,16">
+                        <Button Width="40" Height="40" Margin="0,2"
+                                Style="{StaticResource IconButtonStyle}" ToolTip="Settings">
+                            <TextBlock Text="⚙" FontSize="16" />
+                        </Button>
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
+            <!-- ═══════════════════════════════════════
+                 EXPANDED NAVIGATION PANEL
+            ═══════════════════════════════════════ -->
+            <Border Grid.Row="1" Grid.Column="1"
+                    Background="{StaticResource SidebarGradient}"
+                    BorderBrush="{StaticResource BorderSubtleBrush}"
+                    BorderThickness="0,0,1,0">
+                <DockPanel LastChildFill="True">
+
+                    <!-- Nav section label -->
+                    <StackPanel DockPanel.Dock="Top" Margin="16,16,16,8">
+                        <TextBlock Text="NAVIGATION" FontSize="10" FontWeight="Bold"
+                                   Foreground="{StaticResource TextMutedBrush}"
+                                   FontFamily="Segoe UI" />
+                    </StackPanel>
+
+                    <!-- Main nav buttons -->
+                    <StackPanel DockPanel.Dock="Top">
+                        <Button x:Name="WorkspaceButton" Style="{StaticResource NavButtonStyle}"
+                                Click="WorkspaceButton_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="💬" FontSize="14" Margin="0,0,10,0" VerticalAlignment="Center" />
+                                <TextBlock Text="AI Workspace" FontFamily="Segoe UI" FontSize="13" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="ProjectsButton" Style="{StaticResource NavButtonStyle}"
+                                Click="ProjectsButton_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="▦" FontSize="14" Margin="0,0,10,0" VerticalAlignment="Center" />
+                                <TextBlock Text="Projects" FontFamily="Segoe UI" FontSize="13" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="DashboardNavButton" Style="{StaticResource NavButtonStyle}"
+                                Click="DashboardButton_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="⊞" FontSize="14" Margin="0,0,10,0" VerticalAlignment="Center" />
+                                <TextBlock Text="Dashboard Builder" FontFamily="Segoe UI" FontSize="13" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="InsightsNavButton" Style="{StaticResource NavButtonStyle}"
+                                Click="InsightsButton_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="✦" FontSize="14" Margin="0,0,10,0" VerticalAlignment="Center" />
+                                <TextBlock Text="Insights" FontFamily="Segoe UI" FontSize="13" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="RealtimeNavButton" Style="{StaticResource NavButtonStyle}"
+                                Click="RealtimeButton_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="⚡" FontSize="14" Margin="0,0,10,0" VerticalAlignment="Center" />
+                                <TextBlock Text="Realtime" FontFamily="Segoe UI" FontSize="13" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="AuditNavButton" Style="{StaticResource NavButtonStyle}"
+                                Click="AuditButton_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="🛡" FontSize="14" Margin="0,0,10,0" VerticalAlignment="Center" />
+                                <TextBlock Text="Enterprise Audit" FontFamily="Segoe UI" FontSize="13" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+
+                    <Separator DockPanel.Dock="Top" />
+
+                    <!-- Projects section -->
+                    <StackPanel DockPanel.Dock="Top" Margin="16,8,16,8">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="PROJECTS" FontSize="10" FontWeight="Bold"
+                                       Foreground="{StaticResource TextMutedBrush}"
+                                       FontFamily="Segoe UI" VerticalAlignment="Center" />
+                            <Button Grid.Column="1" Content="+" Width="22" Height="22"
+                                    Background="{StaticResource AccentBgBrush}"
+                                    BorderBrush="Transparent" BorderThickness="0"
+                                    Foreground="{StaticResource AccentBrush}"
+                                    FontSize="14" Cursor="Hand"
+                                    VerticalContentAlignment="Center"
+                                    HorizontalContentAlignment="Center" />
+                        </Grid>
+                    </StackPanel>
+
+                    <ScrollViewer DockPanel.Dock="Top" VerticalScrollBarVisibility="Auto"
+                                  Margin="8,0,8,0" MaxHeight="220">
+                        <StackPanel x:Name="ProjectListPanel" />
+                    </ScrollViewer>
+
+                    <!-- Bottom actions -->
+                    <StackPanel DockPanel.Dock="Bottom" Margin="12,0,12,16">
+                        <Button Content="+ New Project" Height="38"
+                                Style="{StaticResource AccentButtonStyle}"
+                                Margin="0,0,0,8" />
+                        <Button Height="38" Style="{StaticResource GhostButtonStyle}">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="⚙" FontSize="13" Margin="0,0,8,0" VerticalAlignment="Center" />
+                                <TextBlock Text="Settings" FontFamily="Segoe UI" FontSize="13" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
+            <!-- ═══════════════════════════════════════
+                 MAIN CONTENT AREA
+            ═══════════════════════════════════════ -->
+            <Border Grid.Row="1" Grid.Column="2"
+                    Background="{StaticResource BgSurfaceBrush}">
+                <ContentControl x:Name="ContentArea" />
+            </Border>
+
+            <!-- ═══════════════════════════════════════
+                 CONVERSATIONS PANEL
+            ═══════════════════════════════════════ -->
+            <Border Grid.Row="1" Grid.Column="3"
+                    Background="{StaticResource SidebarGradient}"
+                    BorderBrush="{StaticResource BorderSubtleBrush}"
+                    BorderThickness="1,0,0,0">
+                <DockPanel LastChildFill="True">
+                    <StackPanel DockPanel.Dock="Top" Margin="16,16,16,12">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Conversations" FontSize="13" FontWeight="SemiBold"
+                                       Foreground="{StaticResource TextPrimaryBrush}"
+                                       FontFamily="Segoe UI" VerticalAlignment="Center" />
+                            <Button Grid.Column="1" Content="+" Width="28" Height="28"
+                                    Style="{StaticResource IconButtonStyle}" />
+                        </Grid>
+                        <!-- Search conversations -->
+                        <Border Background="#141928" BorderBrush="{StaticResource BorderBrush}"
+                                BorderThickness="1" CornerRadius="8" Height="34" Margin="0,10,0,0">
+                            <Grid Margin="10,0">
+                                <TextBlock Text="⌕  Search conversations…"
+                                           Foreground="{StaticResource TextMutedBrush}"
+                                           FontSize="12" FontFamily="Segoe UI"
+                                           VerticalAlignment="Center" />
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+
+                    <Separator DockPanel.Dock="Top" />
+
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="8,4">
+                        <StackPanel x:Name="ConversationListPanel">
+                            <!-- Placeholder conversations -->
+                            <Border Style="{StaticResource Card2Style}" Margin="4,4" Cursor="Hand">
+                                <StackPanel>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="Sales Q4 Analysis" FontSize="13"
+                                                   FontWeight="SemiBold"
+                                                   Foreground="{StaticResource TextPrimaryBrush}"
+                                                   FontFamily="Segoe UI" />
+                                        <TextBlock Grid.Column="1" Text="2m ago" FontSize="11"
+                                                   Foreground="{StaticResource TextMutedBrush}"
+                                                   FontFamily="Segoe UI" />
+                                    </Grid>
+                                    <TextBlock Text="Generate a dashboard for Q4 revenue trends…"
+                                               FontSize="12" Foreground="{StaticResource TextSecondaryBrush}"
+                                               FontFamily="Segoe UI" Margin="0,4,0,0"
+                                               TextTrimming="CharacterEllipsis" />
+                                </StackPanel>
+                            </Border>
+                            <Border Style="{StaticResource Card2Style}" Margin="4,4" Cursor="Hand">
+                                <StackPanel>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="Customer Churn Model" FontSize="13"
+                                                   FontWeight="SemiBold"
+                                                   Foreground="{StaticResource TextPrimaryBrush}"
+                                                   FontFamily="Segoe UI" />
+                                        <TextBlock Grid.Column="1" Text="1h ago" FontSize="11"
+                                                   Foreground="{StaticResource TextMutedBrush}"
+                                                   FontFamily="Segoe UI" />
+                                    </Grid>
+                                    <TextBlock Text="What are the top churn indicators in the dataset?"
+                                               FontSize="12" Foreground="{StaticResource TextSecondaryBrush}"
+                                               FontFamily="Segoe UI" Margin="0,4,0,0"
+                                               TextTrimming="CharacterEllipsis" />
+                                </StackPanel>
+                            </Border>
+                            <Border Style="{StaticResource Card2Style}" Margin="4,4" Cursor="Hand">
+                                <StackPanel>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="Product Funnel Review" FontSize="13"
+                                                   FontWeight="SemiBold"
+                                                   Foreground="{StaticResource TextPrimaryBrush}"
+                                                   FontFamily="Segoe UI" />
+                                        <TextBlock Grid.Column="1" Text="3h ago" FontSize="11"
+                                                   Foreground="{StaticResource TextMutedBrush}"
+                                                   FontFamily="Segoe UI" />
+                                    </Grid>
+                                    <TextBlock Text="Summarize conversion rates across all funnel stages"
+                                               FontSize="12" Foreground="{StaticResource TextSecondaryBrush}"
+                                               FontFamily="Segoe UI" Margin="0,4,0,0"
+                                               TextTrimming="CharacterEllipsis" />
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </ScrollViewer>
+                </DockPanel>
+            </Border>
+
+            <!-- Resize grip overlay -->
+            <ResizeGrip Grid.Row="1" Grid.Column="3"
+                        VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                        Foreground="{StaticResource TextMutedBrush}" />
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,298 @@
+<UserControl x:Class="DataFlow.UI.Wpf.Views.ProjectDetailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             Background="#F7F7F8"
+             AllowDrop="True"
+             Drop="OnFileDrop_Handler"
+             DragOver="OnDragOver_Handler">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Sticky header -->
+        <Border Grid.Row="0" Background="White" BorderBrush="#E5E7EB"
+                BorderThickness="0,0,0,1" Padding="28,14,28,14">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Back button -->
+                <Button Grid.Column="0" x:Name="BackBtn" Click="BackBtn_Click"
+                        Height="32" Padding="12,0" Cursor="Hand"
+                        Background="Transparent" BorderBrush="#E5E7EB" BorderThickness="1"
+                        FontSize="12" Foreground="#6B7280" FontFamily="Segoe UI">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="←" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Projects" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <TextBlock Grid.Column="1" Text="/" FontSize="16" Foreground="#E5E7EB"
+                           VerticalAlignment="Center" Margin="10,0"/>
+
+                <!-- Project icon -->
+                <Border Grid.Column="2" x:Name="ProjectIconBorder" Width="34" Height="34"
+                        CornerRadius="9" Margin="0,0,10,0">
+                    <TextBlock x:Name="ProjectIconText" FontSize="16"
+                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+
+                <!-- Project name + desc -->
+                <StackPanel Grid.Column="3" VerticalAlignment="Center">
+                    <TextBlock x:Name="ProjectNameText" FontSize="17" FontWeight="Bold"
+                               Foreground="#111827" FontFamily="Segoe UI"/>
+                    <TextBlock x:Name="ProjectDescText" FontSize="11" Foreground="#6B7280"
+                               FontFamily="Segoe UI"/>
+                </StackPanel>
+
+                <!-- Header actions -->
+                <StackPanel Grid.Column="4" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button x:Name="SchemaBtn" Content="Schema" Height="30" Padding="10,0"
+                            Margin="0,0,6,0" Cursor="Hand" Visibility="Collapsed"
+                            Background="White" BorderBrush="#E5E7EB" BorderThickness="1"
+                            FontSize="12" Foreground="#6B7280" FontFamily="Segoe UI"
+                            Click="SchemaBtn_Click"/>
+                    <Button x:Name="ReplaceBtn" Content="Replace" Height="30" Padding="10,0"
+                            Margin="0,0,6,0" Cursor="Hand" Visibility="Collapsed"
+                            Background="White" BorderBrush="#E5E7EB" BorderThickness="1"
+                            FontSize="12" Foreground="#6B7280" FontFamily="Segoe UI"
+                            Click="ReplaceBtn_Click"/>
+                    <Button x:Name="DeleteDatasetBtn" Content="Delete Dataset" Height="30" Padding="10,0"
+                            Margin="0,0,10,0" Cursor="Hand" Visibility="Collapsed"
+                            Background="White" BorderBrush="#FECACA" BorderThickness="1"
+                            FontSize="12" Foreground="#EF4444" FontFamily="Segoe UI"
+                            Click="DeleteDatasetBtn_Click"/>
+                    <Button x:Name="NewDashboardBtn" Height="34" Padding="14,0"
+                            Cursor="Hand" IsEnabled="False"
+                            Background="#6366f1" BorderBrush="Transparent" BorderThickness="0"
+                            FontSize="13" FontWeight="SemiBold" Foreground="White"
+                            FontFamily="Segoe UI" Click="NewDashboardBtn_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" CornerRadius="9"
+                                        Padding="{TemplateBinding Padding}"
+                                        Opacity="{TemplateBinding Opacity}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter Property="Opacity" Value="0.5"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="+" FontSize="15" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="New Dashboard" FontFamily="Segoe UI" FontSize="13" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Body -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="28,28,28,60">
+
+                <!-- Dataset section label -->
+                <TextBlock x:Name="DatasetSectionLabel"
+                           Text="DATASET · no file uploaded"
+                           FontSize="10" FontWeight="Bold" Foreground="#9CA3AF"
+                           FontFamily="Segoe UI" Margin="0,0,0,14"/>
+
+                <!-- Upload zone (shown when no dataset) -->
+                <Border x:Name="UploadZone" MaxWidth="560"
+                        BorderBrush="#C7D2FE" BorderThickness="2"
+                        CornerRadius="14" Padding="40,32"
+                        Cursor="Hand" Margin="0,0,0,32"
+                        MouseLeftButtonDown="UploadZone_Click">
+                    <Border.Background>
+                        <SolidColorBrush x:Name="UploadZoneBg" Color="#FFFFFF"/>
+                    </Border.Background>
+                    <StackPanel HorizontalAlignment="Center">
+                        <Border x:Name="UploadIconBorder" Width="52" Height="52" CornerRadius="14"
+                                Background="#EEF2FF" BorderBrush="#C7D2FE" BorderThickness="1"
+                                HorizontalAlignment="Center" Margin="0,0,0,12">
+                            <TextBlock Text="📤" FontSize="22"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <TextBlock x:Name="UploadTitleText" Text="Drop your file here"
+                                   FontSize="14" FontWeight="Bold" Foreground="#111827"
+                                   FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="0,0,0,4"/>
+                        <TextBlock Text="or click to browse · CSV, Excel, JSON, TSV, Parquet · Max 100 MB"
+                                   FontSize="12" Foreground="#6B7280" FontFamily="Segoe UI"
+                                   HorizontalAlignment="Center" Margin="0,0,0,12"/>
+                        <!-- Progress bar -->
+                        <Border x:Name="ProgressContainer" Width="280" Height="4"
+                                Background="#F3F4F6" CornerRadius="99"
+                                Visibility="Collapsed" Margin="0,0,0,8">
+                            <Border x:Name="ProgressBar" Background="#6366f1"
+                                    CornerRadius="99" HorizontalAlignment="Left" Width="0"/>
+                        </Border>
+                        <!-- Error -->
+                        <Border x:Name="UploadErrorBorder" Visibility="Collapsed"
+                                Background="#FEF2F2" BorderBrush="#FECACA" BorderThickness="1"
+                                CornerRadius="8" Padding="12,7">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="⚠" FontSize="13" Foreground="#EF4444" Margin="0,0,6,0"/>
+                                <TextBlock x:Name="UploadErrorText" FontSize="12" Foreground="#EF4444"
+                                           FontFamily="Segoe UI"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Border>
+
+                <!-- Dataset loaded card (shown when dataset exists) -->
+                <Border x:Name="DatasetCard" Visibility="Collapsed"
+                        Background="White" BorderBrush="#E5E7EB" BorderThickness="1"
+                        CornerRadius="14" Padding="16,14" MaxWidth="600" Margin="0,0,0,32">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Background="#ECFDF5" BorderBrush="#A7F3D0" BorderThickness="1"
+                                CornerRadius="12" Width="44" Height="44" Margin="0,0,14,0">
+                            <TextBlock Text="📊" FontSize="20"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                            <TextBlock x:Name="DatasetFileName" FontSize="13" FontWeight="Bold"
+                                       Foreground="#111827" FontFamily="Segoe UI"/>
+                            <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                                <TextBlock x:Name="DatasetRows" FontSize="11" Foreground="#6B7280"
+                                           FontFamily="Segoe UI"/>
+                                <TextBlock Text=" · " FontSize="11" Foreground="#9CA3AF"/>
+                                <TextBlock x:Name="DatasetCols" FontSize="11" Foreground="#6B7280"
+                                           FontFamily="Segoe UI"/>
+                                <TextBlock Text=" · " FontSize="11" Foreground="#9CA3AF"/>
+                                <TextBlock x:Name="DatasetSize" FontSize="11" Foreground="#6B7280"
+                                           FontFamily="Segoe UI"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <Border Grid.Column="2" Background="#ECFDF5" BorderBrush="#A7F3D0"
+                                BorderThickness="1" CornerRadius="99" Padding="10,4">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="✓" FontSize="11" Foreground="#10B981" Margin="0,0,5,0"/>
+                                <TextBlock Text="Loaded" FontSize="11" FontWeight="SemiBold"
+                                           Foreground="#10B981" FontFamily="Segoe UI"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <!-- Dashboards section -->
+                <Grid Margin="0,0,0,14">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <TextBlock x:Name="DashboardSectionLabel"
+                                   Text="DASHBOARDS · 0"
+                                   FontSize="10" FontWeight="Bold" Foreground="#9CA3AF"
+                                   FontFamily="Segoe UI"/>
+                        <TextBlock x:Name="NoDatasetsWarning"
+                                   Text="⚠ Upload a dataset to create dashboards"
+                                   FontSize="11" Foreground="#F59E0B" FontFamily="Segoe UI"
+                                   Margin="0,3,0,0" Visibility="Collapsed"/>
+                    </StackPanel>
+                </Grid>
+
+                <!-- Dashboards list -->
+                <Border x:Name="DashboardsContainer" Background="White"
+                        BorderBrush="#E5E7EB" BorderThickness="1"
+                        CornerRadius="14" MaxWidth="760" Visibility="Collapsed">
+                    <StackPanel>
+                        <!-- Table header -->
+                        <Border Background="#F9FAFB" BorderBrush="#E5E7EB"
+                                BorderThickness="0,0,0,1" Padding="18,10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="8"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="70"/>
+                                    <ColumnDefinition Width="52"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="1" Text="NAME" FontSize="10" FontWeight="Bold"
+                                           Foreground="#9CA3AF" FontFamily="Segoe UI"/>
+                                <TextBlock Grid.Column="2" Text="WIDGETS" FontSize="10" FontWeight="Bold"
+                                           Foreground="#9CA3AF" FontFamily="Segoe UI"/>
+                                <TextBlock Grid.Column="3" Text="UPDATED" FontSize="10" FontWeight="Bold"
+                                           Foreground="#9CA3AF" FontFamily="Segoe UI"/>
+                            </Grid>
+                        </Border>
+                        <StackPanel x:Name="DashboardsList"/>
+                        <!-- Add dashboard row -->
+                        <Border x:Name="AddDashboardRow" BorderBrush="#E5E7EB"
+                                BorderThickness="0,1,0,0" Padding="18,12"
+                                Cursor="Hand" Visibility="Collapsed"
+                                MouseLeftButtonDown="AddDashboardRow_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Border Background="#EEF2FF" BorderBrush="#C7D2FE" BorderThickness="1"
+                                        CornerRadius="6" Width="22" Height="22" Margin="0,0,10,0">
+                                    <TextBlock Text="+" FontSize="13" Foreground="#6366f1"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <TextBlock Text="New Dashboard" FontSize="12" FontWeight="SemiBold"
+                                           Foreground="#9CA3AF" FontFamily="Segoe UI"
+                                           VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Border>
+
+                <!-- Empty dashboards state -->
+                <Border x:Name="EmptyDashboardsState" Visibility="Collapsed"
+                        MaxWidth="760">
+                    <StackPanel HorizontalAlignment="Center" Margin="0,40,0,40">
+                        <TextBlock Text="No dashboards yet" FontSize="17" FontWeight="Bold"
+                                   Foreground="#111827" FontFamily="Segoe UI"
+                                   HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                        <TextBlock x:Name="EmptyDashboardsHint"
+                                   Text="Upload a dataset first, then create dashboards to visualize it."
+                                   FontSize="12" Foreground="#6B7280" FontFamily="Segoe UI"
+                                   HorizontalAlignment="Center" TextWrapping="Wrap"
+                                   MaxWidth="280" TextAlignment="Center" Margin="0,0,0,20"/>
+                        <Button x:Name="EmptyCreateDashBtn" Content="+ Create Dashboard"
+                                Height="36" Padding="16,0" Cursor="Hand"
+                                Background="#6366f1" BorderBrush="Transparent" BorderThickness="0"
+                                FontSize="13" FontWeight="SemiBold" Foreground="White"
+                                FontFamily="Segoe UI" HorizontalAlignment="Center"
+                                Visibility="Collapsed" Click="NewDashboardBtn_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" CornerRadius="9"
+                                            Padding="{TemplateBinding Padding}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Loading overlay -->
+        <Border x:Name="LoadingOverlay" Grid.RowSpan="2" Visibility="Collapsed"
+                Background="#80FFFFFF">
+            <TextBlock Text="Loading project…" FontSize="13" Foreground="#6B7280"
+                       FontFamily="Segoe UI" HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+        </Border>
+    </Grid>
+</UserControl>

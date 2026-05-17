@@ -1,0 +1,211 @@
+<UserControl x:Class="DataFlow.UI.Wpf.Views.RealtimeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             Background="{StaticResource BgSurfaceBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" Padding="28,20,28,16"
+                BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="0,0,0,1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Width="10" Height="10" Fill="{StaticResource GreenBrush}"
+                                 VerticalAlignment="Center" Margin="0,0,10,0" />
+                        <TextBlock Text="Realtime Analytics" FontSize="22" FontWeight="Bold"
+                                   Foreground="{StaticResource TextPrimaryBrush}" FontFamily="Segoe UI" />
+                    </StackPanel>
+                    <TextBlock Text="Live data streams and dynamic KPI monitoring — updated every 5 seconds"
+                               FontSize="12" Foreground="{StaticResource TextMutedBrush}"
+                               FontFamily="Segoe UI" Margin="0,4,0,0" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border Background="#0A1A0A" BorderBrush="#153D15" BorderThickness="1"
+                            CornerRadius="8" Padding="10,5" Margin="0,0,8,0">
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse Width="7" Height="7" Fill="{StaticResource GreenBrush}"
+                                     VerticalAlignment="Center" Margin="0,0,6,0" />
+                            <TextBlock Text="Stream Active" FontSize="11"
+                                       Foreground="{StaticResource GreenBrush}" FontFamily="Segoe UI" />
+                        </StackPanel>
+                    </Border>
+                    <Button Content="Pause" Style="{StaticResource GhostButtonStyle}" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Live KPI row -->
+        <UniformGrid Grid.Row="1" Columns="4" Margin="28,16,28,0">
+            <Border Style="{StaticResource CardStyle}" Margin="0,0,8,0">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                        <TextBlock Text="⚡" FontSize="14" Margin="0,0,6,0" VerticalAlignment="Center" />
+                        <TextBlock Text="Events/sec" FontSize="11"
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI"
+                                   VerticalAlignment="Center" />
+                    </StackPanel>
+                    <TextBlock Text="2,847" FontSize="26" FontWeight="Bold"
+                               Foreground="{StaticResource CyanBrush}" FontFamily="Segoe UI" />
+                    <TextBlock Text="↑ 14% from avg" FontSize="11"
+                               Foreground="{StaticResource GreenBrush}" FontFamily="Segoe UI"
+                               Margin="0,4,0,0" />
+                </StackPanel>
+            </Border>
+            <Border Style="{StaticResource CardStyle}" Margin="8,0,8,0">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                        <TextBlock Text="👥" FontSize="14" Margin="0,0,6,0" VerticalAlignment="Center" />
+                        <TextBlock Text="Active Sessions" FontSize="11"
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI"
+                                   VerticalAlignment="Center" />
+                    </StackPanel>
+                    <TextBlock Text="4,129" FontSize="26" FontWeight="Bold"
+                               Foreground="{StaticResource AccentHoverBrush}" FontFamily="Segoe UI" />
+                    <TextBlock Text="↑ 6% from avg" FontSize="11"
+                               Foreground="{StaticResource GreenBrush}" FontFamily="Segoe UI"
+                               Margin="0,4,0,0" />
+                </StackPanel>
+            </Border>
+            <Border Style="{StaticResource CardStyle}" Margin="8,0,8,0">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                        <TextBlock Text="💰" FontSize="14" Margin="0,0,6,0" VerticalAlignment="Center" />
+                        <TextBlock Text="Revenue/min" FontSize="11"
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI"
+                                   VerticalAlignment="Center" />
+                    </StackPanel>
+                    <TextBlock Text="$3,412" FontSize="26" FontWeight="Bold"
+                               Foreground="{StaticResource GreenBrush}" FontFamily="Segoe UI" />
+                    <TextBlock Text="↑ 22% from avg" FontSize="11"
+                               Foreground="{StaticResource GreenBrush}" FontFamily="Segoe UI"
+                               Margin="0,4,0,0" />
+                </StackPanel>
+            </Border>
+            <Border Style="{StaticResource CardStyle}" Margin="8,0,0,0">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                        <TextBlock Text="⚠" FontSize="14" Margin="0,0,6,0" VerticalAlignment="Center" />
+                        <TextBlock Text="Error Rate" FontSize="11"
+                                   Foreground="{StaticResource TextMutedBrush}" FontFamily="Segoe UI"
+                                   VerticalAlignment="Center" />
+                    </StackPanel>
+                    <TextBlock Text="0.12%" FontSize="26" FontWeight="Bold"
+                               Foreground="{StaticResource OrangeBrush}" FontFamily="Segoe UI" />
+                    <TextBlock Text="↓ 3% from avg" FontSize="11"
+                               Foreground="{StaticResource GreenBrush}" FontFamily="Segoe UI"
+                               Margin="0,4,0,0" />
+                </StackPanel>
+            </Border>
+        </UniformGrid>
+
+        <!-- Live feed + chart -->
+        <Grid Grid.Row="2" Margin="28,16,28,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="320" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Live chart area -->
+            <Border Grid.Column="0" Style="{StaticResource CardStyle}" Margin="0,0,12,0">
+                <StackPanel>
+                    <TextBlock Text="Live Event Stream" FontSize="13" FontWeight="SemiBold"
+                               Foreground="{StaticResource TextPrimaryBrush}" FontFamily="Segoe UI"
+                               Margin="0,0,0,16" />
+                    <Canvas Height="200">
+                        <!-- Animated sparkline simulation -->
+                        <Polyline Points="0,150 30,120 60,130 90,90 120,100 150,60 180,80 210,40 240,55 270,30 300,45 330,20 360,35 390,15 420,28 450,10 480,22"
+                                  Stroke="{StaticResource CyanBrush}" StrokeThickness="2"
+                                  StrokeLineJoin="Round" />
+                        <Polygon Points="0,150 30,120 60,130 90,90 120,100 150,60 180,80 210,40 240,55 270,30 300,45 330,20 360,35 390,15 420,28 450,10 480,22 480,200 0,200"
+                                 Opacity="0.08">
+                            <Polygon.Fill>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <GradientStop Color="#06B6D4" Offset="0" />
+                                    <GradientStop Color="Transparent" Offset="1" />
+                                </LinearGradientBrush>
+                            </Polygon.Fill>
+                        </Polygon>
+                    </Canvas>
+                </StackPanel>
+            </Border>
+
+            <!-- Event log -->
+            <Border Grid.Column="1" Style="{StaticResource CardStyle}">
+                <StackPanel>
+                    <TextBlock Text="Event Log" FontSize="13" FontWeight="SemiBold"
+                               Foreground="{StaticResource TextPrimaryBrush}" FontFamily="Segoe UI"
+                               Margin="0,0,0,12" />
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="220">
+                        <StackPanel>
+                            <Border Background="#0A1A0A" CornerRadius="6" Padding="10,6" Margin="0,0,0,4">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Ellipse Width="6" Height="6" Fill="{StaticResource GreenBrush}"
+                                                 VerticalAlignment="Center" Margin="0,0,6,0" />
+                                        <TextBlock Text="purchase.completed" FontSize="11"
+                                                   Foreground="{StaticResource GreenBrush}" FontFamily="Consolas" />
+                                    </StackPanel>
+                                    <TextBlock Text="user_id: 84921 · $149.00" FontSize="10"
+                                               Foreground="{StaticResource TextMutedBrush}" FontFamily="Consolas"
+                                               Margin="12,2,0,0" />
+                                </StackPanel>
+                            </Border>
+                            <Border Background="#1A1A0A" CornerRadius="6" Padding="10,6" Margin="0,0,0,4">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Ellipse Width="6" Height="6" Fill="{StaticResource OrangeBrush}"
+                                                 VerticalAlignment="Center" Margin="0,0,6,0" />
+                                        <TextBlock Text="session.timeout" FontSize="11"
+                                                   Foreground="{StaticResource OrangeBrush}" FontFamily="Consolas" />
+                                    </StackPanel>
+                                    <TextBlock Text="user_id: 72104 · 30min" FontSize="10"
+                                               Foreground="{StaticResource TextMutedBrush}" FontFamily="Consolas"
+                                               Margin="12,2,0,0" />
+                                </StackPanel>
+                            </Border>
+                            <Border Background="#0A1A0A" CornerRadius="6" Padding="10,6" Margin="0,0,0,4">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Ellipse Width="6" Height="6" Fill="{StaticResource GreenBrush}"
+                                                 VerticalAlignment="Center" Margin="0,0,6,0" />
+                                        <TextBlock Text="user.signup" FontSize="11"
+                                                   Foreground="{StaticResource GreenBrush}" FontFamily="Consolas" />
+                                    </StackPanel>
+                                    <TextBlock Text="plan: pro · source: organic" FontSize="10"
+                                               Foreground="{StaticResource TextMutedBrush}" FontFamily="Consolas"
+                                               Margin="12,2,0,0" />
+                                </StackPanel>
+                            </Border>
+                            <Border Background="{StaticResource BgCard2Brush}" CornerRadius="6"
+                                    Padding="10,6" Margin="0,0,0,4">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Ellipse Width="6" Height="6" Fill="{StaticResource AccentBrush}"
+                                                 VerticalAlignment="Center" Margin="0,0,6,0" />
+                                        <TextBlock Text="dashboard.viewed" FontSize="11"
+                                                   Foreground="{StaticResource AccentHoverBrush}" FontFamily="Consolas" />
+                                    </StackPanel>
+                                    <TextBlock Text="dashboard_id: 42 · 2.3s load" FontSize="10"
+                                               Foreground="{StaticResource TextMutedBrush}" FontFamily="Consolas"
+                                               Margin="12,2,0,0" />
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DataFlow.Analytics/DataFlow.Analytics.csproj" />
+    <Project Path="src/DataFlow.Application/DataFlow.Application.csproj" />
+    <Project Path="src/DataFlow.Core/DataFlow.Core.csproj" />
+    <Project Path="src/DataFlow.Infrastructure/DataFlow.Infrastructure.csproj" />
+    <Project Path="src/DataFlow.UI/DataFlow.UI.csproj" />
+    <Project Path="src/DataFlow.WebApi/DataFlow.WebApi.csproj" />
+  </Folder>
+</Solution>
