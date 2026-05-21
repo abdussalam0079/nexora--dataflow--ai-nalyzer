@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI.Wpf\\DataFlow.UI.Wpf.csproj": {}
+    "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI.Wpf\\DataFlow.UI.Wpf.csproj": {}
   },
   "projects": {
     "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj": {
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
-                "projectPath": "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
+              "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
+                "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
               },
               "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
                 "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
@@ -92,14 +92,14 @@
         }
       }
     },
-    "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
+    "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj",
+        "projectUniqueName": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj",
         "projectName": "DataFlow.Application",
-        "projectPath": "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj",
+        "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj",
         "packagesPath": "C:\\Users\\PMLS\\.nuget\\packages\\",
-        "outputPath": "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\obj\\",
+        "outputPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PMLS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -286,8 +286,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
-                "projectPath": "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
+              "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
+                "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
               },
               "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
                 "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
@@ -358,14 +358,14 @@
         }
       }
     },
-    "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI.Wpf\\DataFlow.UI.Wpf.csproj": {
+    "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI.Wpf\\DataFlow.UI.Wpf.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI.Wpf\\DataFlow.UI.Wpf.csproj",
+        "projectUniqueName": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI.Wpf\\DataFlow.UI.Wpf.csproj",
         "projectName": "DataFlow.UI.Wpf",
-        "projectPath": "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI.Wpf\\DataFlow.UI.Wpf.csproj",
+        "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI.Wpf\\DataFlow.UI.Wpf.csproj",
         "packagesPath": "C:\\Users\\PMLS\\.nuget\\packages\\",
-        "outputPath": "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI.Wpf\\obj\\",
+        "outputPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI.Wpf\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PMLS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -385,8 +385,8 @@
               "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj": {
                 "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj"
               },
-              "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
-                "projectPath": "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
+              "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
+                "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
               },
               "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
                 "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"

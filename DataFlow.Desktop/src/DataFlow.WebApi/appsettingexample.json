@@ -1,0 +1,12 @@
+// {
+//   "Groq": {
+//     "ApiKey": "nbxzbxnm................................................"
+//   },
+//   "Urls": "http://127.0.0.1:8000",
+//   "Logging": {
+//     "LogLevel": {
+//       "Default": "Warning",
+//       "Microsoft.AspNetCore": "Warning"
+//     }
+//   }
+// }

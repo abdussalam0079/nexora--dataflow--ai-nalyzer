@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bmfZsTAoGPo=",
+  "dgSpecHash": "zghe4Xgmubc=",
   "success": true,
-  "projectFilePath": "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj",
+  "projectFilePath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PMLS\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.8\\microsoft.extensions.dependencyinjection.abstractions.10.0.8.nupkg.sha512",
     "C:\\Users\\PMLS\\.nuget\\packages\\microsoft.win32.systemevents\\10.0.8\\microsoft.win32.systemevents.10.0.8.nupkg.sha512",

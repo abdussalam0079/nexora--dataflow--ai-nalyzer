@@ -1,0 +1,126 @@
+# =========================
+# SYSTEM FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# VS CODE
+# =========================
+.vscode/
+.history/
+
+# =========================
+# NODE / REACT
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build folders
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Environment files
+.env
+.env.*
+
+
+# =========================
+# .NET / C#
+# =========================
+bin/
+obj/
+
+# Rider / Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# =========================
+# LOG FILES
+# =========================
+logs/
+*.log
+
+# =========================
+# TEMP FILES
+# =========================
+tmp/
+temp/
+*.tmp
+
+# =========================
+# DATABASE FILES
+# =========================
+*.sqlite
+*.db
+
+# =========================
+# PYTHON
+# =========================
+__pycache__/
+*.pyc
+venv/
+.env/
+
+# =========================
+# AI / ML MODELS
+# =========================
+models/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# =========================
+# CACHE FILES
+# =========================
+.cache/
+.parcel-cache/
+.eslintcache
+
+# =========================
+# PACKAGE LOCKS (OPTIONAL)
+# Uncomment if you DON'T want them
+# =========================
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# =========================
+# GENERATED FILES
+# =========================
+*.zip
+*.rar
+*.7z
+
+# =========================
+# SECURITY
+# =========================
+secrets.json
+credentials.json
+# ASP.NET App Settings
+appsettings.json
+appsettings.*.json
+bin/
+obj/
+.vs/
+.vscode/
+node_modules/
+*.log
+.envbin/
+obj/
+.vs/
+.vscode/
+node_modules/
+*.log
+.env

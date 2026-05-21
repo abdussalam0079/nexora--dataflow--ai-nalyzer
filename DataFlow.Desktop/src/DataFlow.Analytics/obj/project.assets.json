@@ -309,8 +309,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
-              "projectPath": "d:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
+            "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
+              "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
             },
             "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
               "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"

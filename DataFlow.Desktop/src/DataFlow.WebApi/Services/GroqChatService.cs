@@ -16,7 +16,7 @@ public class GroqChatService(IHttpClientFactory factory, IConfiguration config)
     {
         var apiKey = config["Groq:ApiKey"] ?? Environment.GetEnvironmentVariable("GROQ_API_KEY") ?? "";
         if (string.IsNullOrEmpty(apiKey))
-            return "⚠ GROQ_API_KEY is not set. Add it to appsettings.json or environment variables.";
+            return "⚠ GROQ_API_KEY is not set. Set it via environment variables (e.g., GROQ_API_KEY) or a local .env file.";
 
         var messages = new List<object>();
         if (!string.IsNullOrEmpty(systemPrompt))
