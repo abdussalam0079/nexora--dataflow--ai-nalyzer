@@ -129,3 +129,5 @@ obj/
 .vs/
 *.user
 *.suo
+appsettings.json
+appsettings.Development.json
