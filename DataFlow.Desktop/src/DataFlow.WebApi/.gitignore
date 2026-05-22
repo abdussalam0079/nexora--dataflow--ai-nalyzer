@@ -124,3 +124,8 @@ obj/
 node_modules/
 *.log
 .env
+bin/
+obj/
+.vs/
+*.user
+*.suo
