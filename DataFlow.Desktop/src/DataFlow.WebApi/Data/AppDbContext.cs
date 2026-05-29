@@ -1,50 +1,69 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataFlow.WebApi.Data;
 
-public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+// ─── Identity user ────────────────────────────────────────────────
+public class AppUser : IdentityUser<int>
 {
-    public DbSet<UserEntity>        Users        => Set<UserEntity>();
-    public DbSet<ProjectEntity>     Projects     => Set<ProjectEntity>();
-    public DbSet<DatasetEntity>     Datasets     => Set<DatasetEntity>();
-    public DbSet<DashboardEntity>   Dashboards   => Set<DashboardEntity>();
-    public DbSet<ChatSessionEntity> ChatSessions => Set<ChatSessionEntity>();
-    public DbSet<ChatMessageEntity> ChatMessages => Set<ChatMessageEntity>();
+    public string   DisplayName   { get; set; } = string.Empty;
+    public string?  AvatarInitials{ get; set; }
+    public string   Theme         { get; set; } = "dark";
+    public string?  EncryptedApiKey { get; set; }   // Groq key per-user
+    public DateTime CreatedAt     { get; set; } = DateTime.UtcNow;
+    public DateTime? LastLoginAt  { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder b)
-    {
-        b.Entity<UserEntity>().HasData(new UserEntity
-        {
-            Id = 1, Name = "Default User", Email = "user@local.dev",
-            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, DateTimeKind.Utc)
-        });
-    }
+    public List<ProjectEntity>  Projects  { get; set; } = [];
+    public List<AuditLogEntity> AuditLogs { get; set; } = [];
+    public List<RefreshTokenEntity> RefreshTokens { get; set; } = [];
 }
 
-public class UserEntity
+// ─── Refresh tokens ───────────────────────────────────────────────
+public class RefreshTokenEntity
 {
     public int      Id        { get; set; }
-    public string   Name      { get; set; } = "Default User";
-    public string   Email     { get; set; } = "user@local.dev";
+    public int      UserId    { get; set; }
+    public string   Token     { get; set; } = string.Empty;
+    public DateTime ExpiresAt { get; set; }
+    public bool     Revoked   { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    public List<ProjectEntity> Projects { get; set; } = [];
+    public AppUser? User      { get; set; }
 }
 
+// ─── Audit log ────────────────────────────────────────────────────
+public class AuditLogEntity
+{
+    public int      Id         { get; set; }
+    public int?     UserId     { get; set; }
+    public string   Action     { get; set; } = string.Empty;
+    public string?  Entity     { get; set; }
+    public string?  EntityId   { get; set; }
+    public string?  Details    { get; set; }
+    public string?  IpAddress  { get; set; }
+    public DateTime CreatedAt  { get; set; } = DateTime.UtcNow;
+    public AppUser? User       { get; set; }
+}
+
+// ─── Project ──────────────────────────────────────────────────────
 public class ProjectEntity
 {
     public int      Id          { get; set; }
-    public int      UserId      { get; set; } = 1;
+    public int      OwnerId     { get; set; }           // FK to AppUser
     public string   Name        { get; set; } = string.Empty;
     public string?  Description { get; set; }
     public string   Color       { get; set; } = "#6366f1";
     public string   Icon        { get; set; } = "dashboard";
     public DateTime CreatedAt   { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt   { get; set; } = DateTime.UtcNow;
+
+    public AppUser? Owner        { get; set; }
     public List<DatasetEntity>     Datasets     { get; set; } = [];
     public List<DashboardEntity>   Dashboards   { get; set; } = [];
     public List<ChatSessionEntity> ChatSessions { get; set; } = [];
 }
 
+// ─── Dataset ──────────────────────────────────────────────────────
 public class DatasetEntity
 {
     public int      Id             { get; set; }
@@ -63,6 +82,7 @@ public class DatasetEntity
     public ProjectEntity? Project  { get; set; }
 }
 
+// ─── Dashboard ────────────────────────────────────────────────────
 public class DashboardEntity
 {
     public int      Id          { get; set; }
@@ -78,6 +98,7 @@ public class DashboardEntity
     public ProjectEntity? Project { get; set; }
 }
 
+// ─── Chat ─────────────────────────────────────────────────────────
 public class ChatSessionEntity
 {
     public int      Id        { get; set; }
@@ -87,7 +108,7 @@ public class ChatSessionEntity
     public string?  SessionId { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
-    public ProjectEntity? Project { get; set; }
+    public ProjectEntity? Project  { get; set; }
     public List<ChatMessageEntity> Messages { get; set; } = [];
 }
 
@@ -101,4 +122,40 @@ public class ChatMessageEntity
     public string?  ChartJson { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public ChatSessionEntity? Session { get; set; }
+}
+
+// ─── DbContext ────────────────────────────────────────────────────
+public class AppDbContext(DbContextOptions<AppDbContext> options)
+    : IdentityDbContext<AppUser, IdentityRole<int>, int>(options)
+{
+    public DbSet<ProjectEntity>     Projects      => Set<ProjectEntity>();
+    public DbSet<DatasetEntity>     Datasets      => Set<DatasetEntity>();
+    public DbSet<DashboardEntity>   Dashboards    => Set<DashboardEntity>();
+    public DbSet<ChatSessionEntity> ChatSessions  => Set<ChatSessionEntity>();
+    public DbSet<ChatMessageEntity> ChatMessages  => Set<ChatMessageEntity>();
+    public DbSet<AuditLogEntity>    AuditLogs     => Set<AuditLogEntity>();
+    public DbSet<RefreshTokenEntity> RefreshTokens => Set<RefreshTokenEntity>();
+
+    protected override void OnModelCreating(ModelBuilder b)
+    {
+        base.OnModelCreating(b);   // <-- required for Identity tables
+
+        b.Entity<ProjectEntity>()
+            .HasOne(p => p.Owner)
+            .WithMany(u => u.Projects)
+            .HasForeignKey(p => p.OwnerId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        b.Entity<AuditLogEntity>()
+            .HasOne(a => a.User)
+            .WithMany(u => u.AuditLogs)
+            .HasForeignKey(a => a.UserId)
+            .OnDelete(DeleteBehavior.SetNull);
+
+        b.Entity<RefreshTokenEntity>()
+            .HasOne(r => r.User)
+            .WithMany(u => u.RefreshTokens)
+            .HasForeignKey(r => r.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
+    }
 }

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.WebApi\\DataFlow.WebApi.csproj": {}
+    "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.WebApi\\DataFlow.WebApi.csproj": {}
   },
   "projects": {
-    "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
+    "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj",
         "projectName": "DataFlow.Core",
-        "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj",
-        "packagesPath": "C:\\Users\\PMLS\\.nuget\\packages\\",
-        "outputPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\obj\\",
+        "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj",
+        "packagesPath": "C:\\Users\\Muhammad Harib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PMLS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Muhammad Harib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,20 +66,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -85,17 +75,21 @@
         }
       }
     },
-    "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.WebApi\\DataFlow.WebApi.csproj": {
+    "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.WebApi\\DataFlow.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.WebApi\\DataFlow.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.WebApi\\DataFlow.WebApi.csproj",
         "projectName": "DataFlow.WebApi",
-        "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.WebApi\\DataFlow.WebApi.csproj",
-        "packagesPath": "C:\\Users\\PMLS\\.nuget\\packages\\",
-        "outputPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.WebApi\\obj\\",
+        "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.WebApi\\DataFlow.WebApi.csproj",
+        "packagesPath": "C:\\Users\\Muhammad Harib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.WebApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PMLS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Muhammad Harib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -109,8 +103,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
-                "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
+              "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
+                "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
               }
             }
           }
@@ -139,6 +133,14 @@
               "target": "Package",
               "version": "[3.7.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -148,6 +150,10 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.6.0, )"
             }
           },
           "imports": [
@@ -161,24 +167,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
