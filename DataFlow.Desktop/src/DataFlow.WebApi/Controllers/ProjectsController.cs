@@ -1,18 +1,27 @@
 using DataFlow.Core.Models;
 using DataFlow.WebApi.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataFlow.WebApi.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("api/v1/projects")]
 public class ProjectsController(AppDbContext db) : ControllerBase
 {
     [HttpGet("")]
     public async Task<IActionResult> List()
     {
-        var projects = await db.Projects
+        var userId  = int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)!.Value);
+        var isAdmin = User.IsInRole("Admin");
+
+        var query = db.Projects.AsQueryable();
+        if (!isAdmin)
+            query = query.Where(p => p.OwnerId == userId);
+
+        var projects = await query
             .OrderByDescending(p => p.UpdatedAt)
             .Select(p => new
             {
@@ -28,9 +37,10 @@ public class ProjectsController(AppDbContext db) : ControllerBase
     [HttpPost("")]
     public async Task<IActionResult> Create([FromBody] ProjectCreateRequest req)
     {
+        var userId = int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)!.Value);
         var p = new ProjectEntity
         {
-            UserId = 1, Name = req.Name, Description = req.Description,
+            OwnerId = userId, Name = req.Name, Description = req.Description,
             Color = req.Color ?? "#6366f1", Icon = req.Icon ?? "dashboard",
             CreatedAt = DateTime.UtcNow, UpdatedAt = DateTime.UtcNow
         };

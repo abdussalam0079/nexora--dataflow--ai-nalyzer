@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\DataFlow.Desktop",
+    "\\DataFlow.Desktop\\src",
+    "\\DataFlow.Desktop\\src\\DataFlow.Analytics",
+    "\\DataFlow.Desktop\\src\\DataFlow.Application",
+    "\\DataFlow.Desktop\\src\\DataFlow.Core",
+    "\\DataFlow.Desktop\\src\\DataFlow.Infrastructure",
+    "\\DataFlow.Desktop\\src\\DataFlow.UI",
+    "\\DataFlow.Desktop\\src\\DataFlow.UI.Wpf",
+    "\\DataFlow.Desktop\\src\\DataFlow.WebApi"
+  ],
+  "SelectedNode": "\\DataFlow.Desktop\\src\\DataFlow.Infrastructure",
+  "PreviewInSolutionExplorer": false
+}

@@ -15,3 +15,21 @@ D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\
 D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\refint\DataFlow.Analytics.dll
 D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.pdb
 D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\ref\DataFlow.Analytics.dll
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Analytics.deps.json
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Analytics.dll
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Analytics.pdb
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Application.dll
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Core.dll
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Core.pdb
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\bin\Debug\net8.0\DataFlow.Application.pdb
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.csproj.AssemblyReference.cache
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.AssemblyInfoInputs.cache
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.AssemblyInfo.cs
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.csproj.CoreCompileInputs.cache
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.sourcelink.json
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.CCF7A4AC.Up2Date
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.dll
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\refint\DataFlow.Analytics.dll
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\DataFlow.Analytics.pdb
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.Analytics\obj\Debug\net8.0\ref\DataFlow.Analytics.dll

@@ -1,12 +1,14 @@
 using System.Text.Json;
 using DataFlow.WebApi.Data;
 using DataFlow.WebApi.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataFlow.WebApi.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("api/v1/chat")]
 public class ChatController(GroqChatService groq, AppDbContext db) : ControllerBase
 {

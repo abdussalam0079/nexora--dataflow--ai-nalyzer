@@ -1,11 +1,13 @@
 using System.Text.Json;
 using DataFlow.WebApi.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataFlow.WebApi.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("api/v1/history")]
 public class ChatHistoryController(AppDbContext db) : ControllerBase
 {

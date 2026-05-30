@@ -1,0 +1,20 @@
+﻿DataFlow.UI.Wpf
+
+
+winexe
+C#
+.cs
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.UI.Wpf\obj\Release\net8.0-windows\
+DataFlow.UI.Wpf
+none
+false
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.UI.Wpf\App.xaml
+131928281161
+
+221277572732
+202-1698724179
+Dialogs\NewDashboardDialog.xaml;Dialogs\NewProjectDialog.xaml;MainWindow.xaml;Themes\AppTheme.xaml;Views\ChatWorkspaceView.xaml;Views\DashboardBuilderView.xaml;Views\EnterpriseAuditView.xaml;Views\InsightsView.xaml;Views\ProjectChatView.xaml;Views\ProjectDetailView.xaml;Views\ProjectsHomeView.xaml;Views\RealtimeView.xaml;Views\SimplePage.xaml;
+
+False
+

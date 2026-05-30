@@ -2970,19 +2970,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PMLS\\.nuget\\packages\\": {}
+    "C:\\Users\\Muhammad Harib\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI\\DataFlow.UI.csproj",
+      "projectUniqueName": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.UI\\DataFlow.UI.csproj",
       "projectName": "DataFlow.UI",
-      "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI\\DataFlow.UI.csproj",
-      "packagesPath": "C:\\Users\\PMLS\\.nuget\\packages\\",
-      "outputPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI\\obj\\",
+      "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.UI\\DataFlow.UI.csproj",
+      "packagesPath": "C:\\Users\\Muhammad Harib\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.UI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\PMLS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Muhammad Harib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2996,17 +3001,17 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj": {
-              "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj"
+            "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj": {
+              "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj"
             },
-            "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
-              "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
+            "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
+              "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
             },
-            "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
-              "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
+            "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
+              "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
             },
-            "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj": {
-              "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj"
+            "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj"
             }
           }
         }
@@ -3063,24 +3068,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.25, 8.0.25]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.25, 8.0.25]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.25, 8.0.25]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.25, 8.0.25]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -3101,7 +3088,7 @@
       "message": "Package 'OpenTK 3.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "OpenTK",
       "targetGraphs": [
-        "net8.0-windows"
+        "net8.0-windows7.0"
       ]
     },
     {
@@ -3111,7 +3098,7 @@
       "message": "Package 'OpenTK.GLControl 3.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "OpenTK.GLControl",
       "targetGraphs": [
-        "net8.0-windows"
+        "net8.0-windows7.0"
       ]
     },
     {
@@ -3121,7 +3108,7 @@
       "message": "Package 'SkiaSharp.Views.WindowsForms 3.119.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "SkiaSharp.Views.WindowsForms",
       "targetGraphs": [
-        "net8.0-windows"
+        "net8.0-windows7.0"
       ]
     }
   ]

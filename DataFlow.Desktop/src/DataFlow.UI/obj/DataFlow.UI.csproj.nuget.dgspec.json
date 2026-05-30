@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI\\DataFlow.UI.csproj": {}
+    "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.UI\\DataFlow.UI.csproj": {}
   },
   "projects": {
-    "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj": {
+    "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj",
+        "projectUniqueName": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj",
         "projectName": "DataFlow.Analytics",
-        "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj",
-        "packagesPath": "C:\\Users\\PMLS\\.nuget\\packages\\",
-        "outputPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Analytics\\obj\\",
+        "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj",
+        "packagesPath": "C:\\Users\\Muhammad Harib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Analytics\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PMLS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Muhammad Harib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
-                "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
+              "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
+                "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
               },
-              "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
-                "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
+              "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
+                "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
               }
             }
           }
@@ -69,20 +73,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -92,17 +82,21 @@
         }
       }
     },
-    "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
+    "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj",
         "projectName": "DataFlow.Application",
-        "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj",
-        "packagesPath": "C:\\Users\\PMLS\\.nuget\\packages\\",
-        "outputPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\obj\\",
+        "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj",
+        "packagesPath": "C:\\Users\\Muhammad Harib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PMLS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Muhammad Harib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -116,8 +110,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
-                "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
+              "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
+                "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
               }
             }
           }
@@ -158,20 +152,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -181,17 +161,21 @@
         }
       }
     },
-    "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
+    "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj",
         "projectName": "DataFlow.Core",
-        "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj",
-        "packagesPath": "C:\\Users\\PMLS\\.nuget\\packages\\",
-        "outputPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\obj\\",
+        "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj",
+        "packagesPath": "C:\\Users\\Muhammad Harib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PMLS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Muhammad Harib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -239,20 +223,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -262,17 +232,21 @@
         }
       }
     },
-    "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj": {
+    "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj",
         "projectName": "DataFlow.Infrastructure",
-        "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\PMLS\\.nuget\\packages\\",
-        "outputPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Muhammad Harib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PMLS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Muhammad Harib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -286,11 +260,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
-                "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
+              "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
+                "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
               },
-              "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
-                "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
+              "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
+                "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
               }
             }
           }
@@ -335,20 +309,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -358,17 +318,21 @@
         }
       }
     },
-    "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI\\DataFlow.UI.csproj": {
+    "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.UI\\DataFlow.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI\\DataFlow.UI.csproj",
+        "projectUniqueName": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.UI\\DataFlow.UI.csproj",
         "projectName": "DataFlow.UI",
-        "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI\\DataFlow.UI.csproj",
-        "packagesPath": "C:\\Users\\PMLS\\.nuget\\packages\\",
-        "outputPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.UI\\obj\\",
+        "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.UI\\DataFlow.UI.csproj",
+        "packagesPath": "C:\\Users\\Muhammad Harib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.UI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PMLS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Muhammad Harib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -382,17 +346,17 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj": {
-                "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj"
+              "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj": {
+                "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Analytics\\DataFlow.Analytics.csproj"
               },
-              "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
-                "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
+              "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj": {
+                "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Application\\DataFlow.Application.csproj"
               },
-              "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
-                "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
+              "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj": {
+                "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Core\\DataFlow.Core.csproj"
               },
-              "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj": {
-                "projectPath": "D:\\dataflow ai analysis visyual project\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj"
+              "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Muhammad Harib\\source\\repos\\Nexora AI Analytics\\DataFlow.Desktop\\src\\DataFlow.Infrastructure\\DataFlow.Infrastructure.csproj"
               }
             }
           }
@@ -449,24 +413,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

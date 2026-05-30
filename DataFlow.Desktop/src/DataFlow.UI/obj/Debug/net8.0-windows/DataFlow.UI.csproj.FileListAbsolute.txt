@@ -92,3 +92,12 @@ D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.UI\bin\Deb
 D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.UI\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
 D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.UI\bin\Debug\net8.0-windows\DataFlow.Analytics.dll
 D:\dataflow ai analysis visyual project\DataFlow.Desktop\src\DataFlow.UI\bin\Debug\net8.0-windows\DataFlow.Analytics.pdb
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.UI\obj\Debug\net8.0-windows\DataFlow.UI.csproj.AssemblyReference.cache
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.UI\obj\Debug\net8.0-windows\DataFlow.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.UI\obj\Debug\net8.0-windows\DataFlow.UI.AssemblyInfoInputs.cache
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.UI\obj\Debug\net8.0-windows\DataFlow.UI.AssemblyInfo.cs
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.UI\obj\Debug\net8.0-windows\DataFlow.UI.csproj.CoreCompileInputs.cache
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.UI\obj\Debug\net8.0-windows\DataFlow.UI.sourcelink.json
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.UI\obj\Debug\net8.0-windows\DataFlow.UI.dll
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.UI\obj\Debug\net8.0-windows\refint\DataFlow.UI.dll
+C:\Users\Muhammad Harib\source\repos\Nexora AI Analytics\DataFlow.Desktop\src\DataFlow.UI\obj\Debug\net8.0-windows\DataFlow.UI.pdb
